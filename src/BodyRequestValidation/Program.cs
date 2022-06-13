@@ -6,7 +6,8 @@ using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSingleton<IPersonService, InMemoryPersonService>();
+builder.Services.AddSingleton<IPersonService, PersonService>();
+builder.Services.AddSingleton<IFoodService, FoodService>();
 
 #region Validators
 

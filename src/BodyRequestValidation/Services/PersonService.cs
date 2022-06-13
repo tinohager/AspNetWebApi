@@ -4,7 +4,7 @@ using System.Collections.Concurrent;
 
 namespace BodyRequestValidation.Services
 {
-    public class InMemoryPersonService : IPersonService
+    public class PersonService : IPersonService
     {
         private int _nextId = 0;
         private ConcurrentDictionary<int, PersonDto> _persons = new ConcurrentDictionary<int, PersonDto>();
@@ -34,7 +34,8 @@ namespace BodyRequestValidation.Services
                 CreatedAt = DateTime.Now,
                 Firstname = createRequest.Firstname,
                 Lastname = createRequest.Lastname,
-                EmailAddress = createRequest.EmailAddress
+                EmailAddress = createRequest.EmailAddress,
+                FoodPreferences = createRequest.FoodPreferences
             };
 
             this._persons.TryAdd(nextId, item);
