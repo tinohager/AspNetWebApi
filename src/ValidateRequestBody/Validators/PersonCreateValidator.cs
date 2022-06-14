@@ -1,9 +1,9 @@
-﻿using BodyRequestValidation.Dtos.Person;
-using BodyRequestValidation.Services;
-using FluentValidation;
+﻿using FluentValidation;
 using FluentValidation.Validators;
+using ValidateRequestBody.Dtos.Person;
+using ValidateRequestBody.Services;
 
-namespace BodyRequestValidation.Validators
+namespace ValidateRequestBody.Validators
 {
     public class PersonCreateValidator : AbstractValidator<PersonCreateRequestDto>
     {

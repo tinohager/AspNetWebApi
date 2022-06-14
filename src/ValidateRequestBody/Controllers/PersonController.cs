@@ -1,9 +1,9 @@
-using BodyRequestValidation.Dtos;
-using BodyRequestValidation.Dtos.Person;
-using BodyRequestValidation.Services;
 using Microsoft.AspNetCore.Mvc;
+using ValidateRequestBody.Dtos;
+using ValidateRequestBody.Dtos.Person;
+using ValidateRequestBody.Services;
 
-namespace BodyRequestValidation.Controllers
+namespace ValidateRequestBody.Controllers
 {
     [ApiController]
     [Route("[controller]")]

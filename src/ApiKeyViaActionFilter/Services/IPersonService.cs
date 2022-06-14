@@ -1,7 +1,7 @@
-﻿using BodyRequestValidation.Dtos;
-using BodyRequestValidation.Dtos.Person;
+﻿using ApiKeyViaActionFilter.Dtos;
+using ApiKeyViaActionFilter.Dtos.Person;
 
-namespace BodyRequestValidation.Services
+namespace ApiKeyViaActionFilter.Services
 {
     public interface IPersonService
     {

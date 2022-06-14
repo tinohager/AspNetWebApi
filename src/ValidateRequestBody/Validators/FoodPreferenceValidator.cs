@@ -1,7 +1,7 @@
-﻿using BodyRequestValidation.Services;
-using FluentValidation;
+﻿using FluentValidation;
+using ValidateRequestBody.Services;
 
-namespace BodyRequestValidation.Validators
+namespace ValidateRequestBody.Validators
 {
     public class FoodPreferenceValidator : AbstractValidator<string>
     {
@@ -12,7 +12,7 @@ namespace BodyRequestValidation.Validators
                 var foods = foodService.QueryAsync().GetAwaiter().GetResult();
 
                 return foods.Contains(food, StringComparer.OrdinalIgnoreCase);
-            }).WithMessage("Not allowed food");
+            }).WithMessage("Food not supported");
         }
     }
 }

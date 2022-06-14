@@ -1,4 +1,4 @@
-﻿namespace BodyRequestValidation.Dtos
+﻿namespace ValidateRequestBody.Dtos
 {
     public class PagingInfoDto<T>
     {

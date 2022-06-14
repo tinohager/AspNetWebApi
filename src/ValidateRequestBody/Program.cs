@@ -1,8 +1,8 @@
-using BodyRequestValidation.Dtos.Person;
-using BodyRequestValidation.Services;
-using BodyRequestValidation.Validators;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using ValidateRequestBody.Dtos.Person;
+using ValidateRequestBody.Services;
+using ValidateRequestBody.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,10 +29,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

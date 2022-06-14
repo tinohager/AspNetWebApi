@@ -1,4 +1,4 @@
-﻿namespace BodyRequestValidation.Services
+﻿namespace ValidateRequestBody.Services
 {
     public class FoodService : IFoodService
     {

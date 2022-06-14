@@ -1,8 +1,8 @@
-﻿using BodyRequestValidation.Dtos;
-using BodyRequestValidation.Dtos.Person;
+﻿using ApiKeyViaActionFilter.Dtos;
+using ApiKeyViaActionFilter.Dtos.Person;
 using System.Collections.Concurrent;
 
-namespace BodyRequestValidation.Services
+namespace ApiKeyViaActionFilter.Services
 {
     public class PersonService : IPersonService
     {
