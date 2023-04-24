@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Validation", "1. Validat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Authentication", "2. Authentication", "{F8F3FB02-474D-448F-848C-9CA465D5D856}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiKeyViaActionFilter", "ApiKeyViaActionFilter\ApiKeyViaActionFilter.csproj", "{FA4BEBB8-C020-48D7-8D3F-8599D2612847}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiKeyViaActionFilter", "ApiKeyViaActionFilter\ApiKeyViaActionFilter.csproj", "{FA4BEBB8-C020-48D7-8D3F-8599D2612847}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiKeyViaMiddleware", "ApiKeyViaMiddleware\ApiKeyViaMiddleware.csproj", "{D1FAC606-4676-4389-8408-B7EA222CCC17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{FA4BEBB8-C020-48D7-8D3F-8599D2612847}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA4BEBB8-C020-48D7-8D3F-8599D2612847}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA4BEBB8-C020-48D7-8D3F-8599D2612847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1FAC606-4676-4389-8408-B7EA222CCC17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1FAC606-4676-4389-8408-B7EA222CCC17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1FAC606-4676-4389-8408-B7EA222CCC17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1FAC606-4676-4389-8408-B7EA222CCC17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DC0827A4-29BF-4F5C-9117-D106BC18DA5E} = {549B1BD1-04F7-490C-A289-7536315812CA}
 		{FA4BEBB8-C020-48D7-8D3F-8599D2612847} = {F8F3FB02-474D-448F-848C-9CA465D5D856}
+		{D1FAC606-4676-4389-8408-B7EA222CCC17} = {F8F3FB02-474D-448F-848C-9CA465D5D856}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DDD6865-E080-49B6-8D26-9346849BD0B0}

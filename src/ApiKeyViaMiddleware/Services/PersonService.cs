@@ -1,8 +1,8 @@
-﻿using ApiKeyViaActionFilter.Dtos;
-using ApiKeyViaActionFilter.Dtos.Person;
+﻿using ApiKeyViaMiddleware.Dtos;
+using ApiKeyViaMiddleware.Dtos.Person;
 using System.Collections.Concurrent;
 
-namespace ApiKeyViaActionFilter.Services
+namespace ApiKeyViaMiddleware.Services
 {
     public class PersonService : IPersonService
     {

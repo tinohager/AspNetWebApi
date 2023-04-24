@@ -6,7 +6,7 @@ namespace ApiKeyViaActionFilter.Attributes
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class ApiKeyAttribute : Attribute, IAsyncActionFilter
     {
-        private const string ApiKeyHeaderName = "X-Api-Key";
+        public const string ApiKeyHeaderName = "X-Api-Key";
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {

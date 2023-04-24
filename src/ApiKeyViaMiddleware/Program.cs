@@ -1,5 +1,5 @@
-using ApiKeyViaActionFilter.Attributes;
-using ApiKeyViaActionFilter.Services;
+using ApiKeyViaMiddleware.Middlewares;
+using ApiKeyViaMiddleware.Services;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +8,7 @@ builder.Services.AddSingleton<IPersonService, PersonService>();
 builder.Services.AddSingleton<IFoodService, FoodService>();
 
 builder.Services.AddControllers();
-
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(configuration =>
 {
@@ -16,7 +16,7 @@ builder.Services.AddSwaggerGen(configuration =>
     {
         Type = SecuritySchemeType.ApiKey,
         In = ParameterLocation.Header,
-        Name = ApiKeyAttribute.ApiKeyHeaderName,
+        Name = ApiKeyMiddleware.ApiKeyHeaderName,
         Description = "Use `demokey123` as ApiKey, change this in production enviorment!"
     });
 
@@ -38,12 +38,14 @@ builder.Services.AddSwaggerGen(configuration =>
 
 var app = builder.Build();
 
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+app.UseApiKey();
 app.UseAuthorization();
 
 app.MapControllers();
