@@ -1,3 +1,4 @@
+using ApiKeyViaMiddleware.Attributes;
 using ApiKeyViaMiddleware.Dtos;
 using ApiKeyViaMiddleware.Dtos.Person;
 using ApiKeyViaMiddleware.Services;
@@ -30,6 +31,7 @@ namespace ApiKeyViaMiddleware.Controllers
             return StatusCode(StatusCodes.Status200OK, pagingInfo);
         }
 
+        [ApiKey]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<ActionResult<PagingInfoDto<PersonDto>>> AddAsync(

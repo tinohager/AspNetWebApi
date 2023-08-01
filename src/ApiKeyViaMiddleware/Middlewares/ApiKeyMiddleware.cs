@@ -1,4 +1,5 @@
-﻿using ApiKeyViaMiddleware.Exceptions;
+﻿using ApiKeyViaMiddleware.Attributes;
+using ApiKeyViaMiddleware.Exceptions;
 using Microsoft.AspNetCore.Http.Features;
 
 namespace ApiKeyViaMiddleware.Middlewares
@@ -19,6 +20,12 @@ namespace ApiKeyViaMiddleware.Middlewares
         {
             var hasAuthorizeAttribute = context.Features.Get<IEndpointFeature>()?.Endpoint?.Metadata
                 .Any(m => m is ApiKeyAttribute);
+
+            if (!hasAuthorizeAttribute.HasValue || !hasAuthorizeAttribute.Value)
+            {
+                await this._next(context);
+                return;
+            }
 
             if (!context.Request.Headers.TryGetValue(ApiKeyHeaderName, out var receivedApiKey))
             {
