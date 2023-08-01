@@ -1,5 +1,4 @@
-﻿using ApiKeyViaMiddleware.Attributes.Portalum.Sales.UdoApi.Attributes;
-using ApiKeyViaMiddleware.Exceptions;
+﻿using ApiKeyViaMiddleware.Exceptions;
 using Microsoft.AspNetCore.Http.Features;
 
 namespace ApiKeyViaMiddleware.Middlewares
